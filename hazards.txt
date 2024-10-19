@@ -1,0 +1,25 @@
+1. Suspended Load. Most suspended loads require specialty equipment to lift more than 500 lbs of  load higher than 1 foot off the ground. In such a case, the suspended load would  be more than the high-energy threshold.
+
+2. Fall From Elevation. Considering the average weight of a human is over 150 lbs, 4 feet of elevation  (measured from the ground surface to the bottom of the feet) exceeds the high-  energy threshold.
+
+3. Mobile Equipment and Traffic with Workers on Foot. Because of the mass, most mobile equipment, including motor vehicles, exceeds  the high-energy threshold when the equipment or vehicle is in motion. The  energy exposure is taken from the point of view of the worker on foot and not  the equipment operator or vehicle driver.    Note: For work zone traffic only, an incident occurs only when a vehicle departs  from the intended path of travel and is within 6 ft of an exposed employee or if  an employee enters the traffic pattern.
+
+4. Motor Vehicle Incident (Occupant). Estimates of the motor vehicle speed typically involved in serious or fatal  crashes vary greatly from the National Transportation Safety Board, National  Highway Transportation Safety Association, and the U.S. Department of  Transportation. The team selected a conservative estimate of 30 miles per hour  as the high-energy threshold. This energy exposure is taken from the point of  view of the vehicle occupants, including the driver. 
+
+5. Heavy Rotating Equipment. Computing mechanical energy can be complex, as it requires estimates of the  moment of inertia and angular velocity for rotating objects and stiffness and  displacement for tension or compression. Thus, all heavy rotating equipment  beyond powered hand tools typically exceed the high-energy threshold and  should be considered high-energy.  
+
+6. High Temperature. According to the American Burn Association, exposure to any substance greater  than or equal to 150 degrees Fahrenheit typically cause third degree burns when  contacted for 2 seconds or more. 
+
+7. Steam. According to the American Burn Association, any circumstance with the release  of steam exceeds the high-energy threshold.
+
+8. Fire with Sustained Fuel Source. According to the North American Combustion Handbook, a lightly combustible  material like paper burns at approximately 700 degrees Fahrenheit, far  exceeding the temperature threshold. Fire with a sustained source of fuel  exceeds the high-energy threshold.
+
+9. Explosion. Most incidents described as an explosion exceed the high-energy threshold.
+
+10. Excacation or Trench. An exposure to unsupported soil in a trench or excavation that exceeds 5 feet of  height exceeds the high-energy threshold. Typically, for each foot of depth, soil  pressure increases by about 40 pounds per square foot. Thus, at 5 feet of depth,  the pressure is approximately 200 psf.
+
+11. Electrical Contact with Source. Electricity equal to or exceeding 50 volts is sufficient to result in serious injury or  death according to the NFPA 70E.
+
+12. Arc Flash. Any arc flash exceeds the high-energy threshold because of the voltage  exposure, according to the NFPA 70E. Also, permissible distances are covered in  OSHA Standard 1910.333 and section 1910.333(c)(3)(ii)(C) in particular.  
+
+13. High Dose of Toxic Chemical or Radiation. Exposure to toxic chemicals or radiation. An industrial hygienist, chemist,  toxicologist, or other qualified person should be involved in the assessment of  toxicity and acceptable exposure limits.  The following reference should be used  to judge acceptable exposure limits:  ▪  Immediately Dangerous to Life or Health (IDLH) Values from the Center  for Disease Control: https://www.cdc.gov/niosh/idlh/intridl4.html   ▪  Exposures which reduce oxygen (O2) levels below 16%  ▪  Corrosive chemical exposures (pH <2 or >12.5)  
