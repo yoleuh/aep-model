@@ -130,7 +130,7 @@ training_args = TrainingArguments(
     eval_steps=500,
     save_strategy="no",
     # Max Steps
-    max_steps=100,
+    max_steps=500,
     use_cpu=True,  # Force CPU usage
 )
 
