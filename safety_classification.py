@@ -1,3 +1,17 @@
+"""
+Safety Classification Project
+
+Created by:
+- Reid Ammer (ammer.5@osu.edu)
+- Brian Tan (tan.1220@osu.edu)
+
+For the AEP Safety Observation Challenge at HackOHI/O 2024
+
+Description:
+This script trains a model to classify safety observations into high priority
+and standard priority categories using the DistilBERT model.
+"""
+
 import os
 
 import numpy as np
@@ -13,15 +27,27 @@ from transformers import (
     TrainingArguments,
 )
 
-# Force CPU usage
-torch.cuda.is_available = lambda: False
-device = torch.device("cpu")
+# Configurable variables
+INPUT_FILE = "data/data.csv"  # Path to the input CSV file
+MAX_STEPS = 500  # Maximum number of training steps
+NUM_TRAIN_EPOCHS = 3  # Number of training epochs
+TRAIN_BATCH_SIZE = 16  # Training batch size
+EVAL_BATCH_SIZE = 64  # Evaluation batch size
+WARMUP_STEPS = 500  # Number of warmup steps for learning rate scheduler
+WEIGHT_DECAY = 0.01  # Weight decay for regularization
+USE_CPU = True  # Force CPU usage instead of GPU
+
+# Force CPU usage if specified (Do not change)
+if USE_CPU:
+    torch.cuda.is_available = lambda: False
+device = torch.device("cpu" if USE_CPU else "cuda")
 
 # Load data
-df = pd.read_csv("content/data_cleaned.csv")
+df = pd.read_csv(INPUT_FILE)
 
 
 # Define classification function
+# You can add new keywords here
 def classify_priority(comment):
     high_priority_keywords = [
         "fall",
@@ -119,19 +145,19 @@ def compute_metrics(pred):
 # Set up training arguments
 training_args = TrainingArguments(
     output_dir="./results",
-    num_train_epochs=3,  # Increased from 1 to 3
-    per_device_train_batch_size=16,
-    per_device_eval_batch_size=64,
-    warmup_steps=500,
-    weight_decay=0.01,
+    num_train_epochs=NUM_TRAIN_EPOCHS,
+    per_device_train_batch_size=TRAIN_BATCH_SIZE,
+    per_device_eval_batch_size=EVAL_BATCH_SIZE,
+    warmup_steps=WARMUP_STEPS,
+    weight_decay=WEIGHT_DECAY,
     logging_dir="./logs",
     logging_steps=10,
     evaluation_strategy="steps",
     eval_steps=500,
     save_strategy="no",
     # Max Steps
-    max_steps=500,
-    use_cpu=True,  # Force CPU usage
+    max_steps=MAX_STEPS,
+    use_cpu=USE_CPU,
 )
 
 # Create and run trainer
@@ -193,16 +219,15 @@ if __name__ == "__main__":
             model_save_path, tokenizer_save_path
         )
 
-        # Example of classifying new inputs
-        new_comments = [
-            "A worker reported a near-miss incident with a forklift in the warehouse.",
-            "The office printer is running low on toner and needs replacement soon.",
-            "An employee noticed a crack in the support beam of the main factory floor.",
-        ]
+        # Classify all comments in the original dataset
+        df["predicted_priority"] = df["PNT_ATRISKNOTES_TX"].apply(
+            lambda x: classify_new_input(x, loaded_model, loaded_tokenizer)
+        )
 
-        for comment in new_comments:
-            result = classify_new_input(comment, loaded_model, loaded_tokenizer)
-            print(f"New comment: {comment}")
-            print(f"Classification: {result}\n")
+        # Save the results to a new CSV file
+        output_path = "results/output_data.csv"
+        df.to_csv(output_path, index=False)
+        print("Results saved to {output_path}")
+
     else:
         print("Saved model not found. Please run the training script first.")

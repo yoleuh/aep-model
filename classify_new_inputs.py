@@ -1,9 +1,32 @@
+"""
+Safety Classification Project
+
+Created by:
+- Reid Ammer (ammer.5@osu.edu)
+- Brian Tan (tan.1220@osu.edu)
+
+For the AEP Safety Observation Challenge at HackOHI/O 2024
+
+Description:
+This script loads the safety classification model previously fine-tuned by
+safety_classification.py and allows users to interactively input new safety
+comments for classification. It provides real-time predictions, categorizing
+each input as either "High Priority" or "Standard Priority" along with a
+confidence score.
+
+Usage: Run the script and enter safety comments when prompted. Type 'quit' to exit.
+"""
+
 import torch
 from transformers import DistilBertForSequenceClassification, DistilBertTokenizerFast
 
-# Force CPU usage (remove if you want to use GPU)
-torch.cuda.is_available = lambda: False
-device = torch.device("cpu")
+# Configurable variables
+USE_CPU = True  # Force CPU usage instead of GPU
+
+# Force CPU usage if specified (Do not change)
+if USE_CPU:
+    torch.cuda.is_available = lambda: False
+device = torch.device("cpu" if USE_CPU else "cuda")
 
 # Paths to saved model and tokenizer
 MODEL_PATH = "./saved_model"
