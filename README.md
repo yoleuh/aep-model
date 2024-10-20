@@ -29,7 +29,7 @@ This project uses machine learning to classify safety comments into high priorit
 
 3. Install the required packages:
    ```
-   pip install -r content/requirements.txt
+   pip install -r requirements.txt
    ```
 
 ## Usage
