@@ -152,7 +152,7 @@ training_args = TrainingArguments(
     weight_decay=WEIGHT_DECAY,
     logging_dir="./logs",
     logging_steps=10,
-    evaluation_strategy="steps",
+    eval_strategy="steps",
     eval_steps=500,
     save_strategy="no",
     # Max Steps
