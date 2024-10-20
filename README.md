@@ -11,7 +11,7 @@ This project uses machine learning to classify safety comments into high priorit
 - `requirements.txt`: List of Python packages required for the project.
 - `data/data.csv`: Input data file.
 
-## Setup Instructions
+## Installation
 
 1. Clone the repository:
 
