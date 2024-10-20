@@ -97,6 +97,8 @@ If you want to train the model on your own dataset:
 
 - Be cautious with the included data and any personal data you use. Do not share it or use it with public AI services for privacy concerns.
 
+- This project utilizes the DistilBERT base model (uncased) for sequence classification. DistilBERT is a smaller, faster version of BERT, developed by Hugging Face. DistilBERT is a transformers model, pretrained on the same corpus as BERT in a self-supervised fashion, using the BERT base model as a teacher. It's designed for tasks that use the whole sentence to make decisions, such as sequence classification, token classification, or question answering.
+
 ## Troubleshooting
 
 If you encounter any issues:
