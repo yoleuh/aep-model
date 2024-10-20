@@ -2,7 +2,7 @@
 
 For the AEP Safety Observation Challenge at HackOHI/O 2024
 
-This project uses machine learning to classify safety comments into high priority and standard priority categories. It fine-tunes a deep learning transformer-based neural network ([DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased), adapting it to the specific task of safety observation classification.
+This project uses machine learning to classify safety comments into high priority and standard priority categories. It fine-tunes a deep learning transformer-based neural network ([DistilBERT](https://huggingface.co/distilbert/distilbert-base-uncased)), adapting it to the specific task of safety observation classification.
 
 ## Project Structure
 
