@@ -108,7 +108,7 @@ If you encounter any issues:
 - Make sure you've run `safety_classification.py` before trying to use `classify_new_inputs.py`.
 - If using custom data, check that your CSV file is formatted correctly and the column names match those expected by the script.
 - Training the model will take a while, and will be physically demanding on your machines RAM. If this is an issue, the MAX_STEPS variable can be decreased, or another model can be used.
-- Do not use ctrl-c to end to process early even if you think it is done, after the evaluation results, the model, tokenizer, and results will be saved.
+- Do not use ctrl-c to end to process early even if you think it is done, after the evaluation results are printed, the model, tokenizer, and results will be saved.
 
 For any other issues, please open an issue in the project repository or email one of us.
 
