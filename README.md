@@ -16,8 +16,8 @@ This project uses machine learning to classify safety comments into high priorit
 1. Clone the repository:
 
    ```
-   git clone https://github.com/yoleuh/aep-ollama.git
-   cd aep-ollama
+   git clone https://github.com/yoleuh/aep-model.git
+   cd aep-model
    ```
 
 2. Create a virtual environment (optional but recommended):
