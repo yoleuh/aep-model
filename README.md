@@ -23,7 +23,7 @@ This project uses machine learning to classify safety comments into high priorit
 2. Create a virtual environment (optional but recommended):
 
    ```
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
    ```
 
@@ -38,7 +38,7 @@ This project uses machine learning to classify safety comments into high priorit
 
 1. Run the training and classification script:
    ```
-   python safety_classification.py
+   python3 safety_classification.py
    ```
 2. This script will:
    - Train the model on the included dataset
@@ -51,7 +51,7 @@ This project uses machine learning to classify safety comments into high priorit
 
 1. After training the model, you can use it to classify new safety comments interactively:
    ```
-   python classify_new_inputs.py
+   python3 classify_new_inputs.py
    ```
 2. This script will:
    - Load the trained model and tokenizer
@@ -81,7 +81,7 @@ If you want to train the model on your own dataset:
 4. Run the training script:
 
    ```
-   python safety_classification.py
+   python3 safety_classification.py
    ```
 
 5. The script will train on your new data, evaluate the model, and save the results.
