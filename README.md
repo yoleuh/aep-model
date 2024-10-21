@@ -86,6 +86,17 @@ If you want to train the model on your own dataset:
 
 5. The script will train on your new data, evaluate the model, and save the results.
 
+## Results
+
+Evaluation Results:
+Accuracy: 0.9910
+F1 Score: 0.9833
+Precision: 0.9925
+Recall: 0.9742
+
+## Screenshots
+![Classifier](content/classify.png)
+
 ## Notes
 
 - The scripts are set to use CPU for computations. If you have a GPU and want to use it, set USE_CPU to False in both scripts.
