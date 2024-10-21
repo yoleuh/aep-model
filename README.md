@@ -88,10 +88,10 @@ If you want to train the model on your own dataset:
 
 ## Results
 
-Evaluation Results:
-Accuracy: 0.9910
-F1 Score: 0.9833
-Precision: 0.9925
+Evaluation Results:\
+Accuracy: 0.9910\
+F1 Score: 0.9833\
+Precision: 0.9925\
 Recall: 0.9742
 
 ## Screenshots
