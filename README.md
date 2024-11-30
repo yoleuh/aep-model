@@ -77,15 +77,10 @@ Recall: 0.9742
 If you encounter any issues:
 
 - Ensure all dependencies are correctly installed.
-- Verify that you have sufficient disk space for saving the model.
 - Make sure you've run `safety_classification.py` before trying to use `classify_new_inputs.py`.
-- If using custom data, check that your CSV file is formatted correctly and the column names match those expected by the script.
 - Training the model will take a while, and will be physically demanding on your machines RAM. If this is an issue, the MAX_STEPS variable can be decreased, or another model can be used.
-- Do not use ctrl-c to end to process early even if you think it is done, after the evaluation results are printed, the model, tokenizer, and results will be saved.
 
 ## Contributors
-
-Created by:
 
 - Reid Ammer (ammer.5@osu.edu)
 - Brian Tan (tan.1220@osu.edu)
